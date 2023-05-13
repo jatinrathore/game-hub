@@ -23,6 +23,7 @@ const GenreList = ({ onSelectGenre, selectedGenre }: Props) => {
   ];
 
   // if (isLoading) return <Spinner />;
+  if (error) return null;
   return (
     <List>
       {isLoading &&
