@@ -9,9 +9,10 @@ const GameTrailer = ({ gameId }: Props) => {
 
   if (isLoading) return null;
 
-  if (error) return error;
+  if (error) throw error;
 
   const first = data?.results[0];
+
   if (!first) return null;
 
   return first ? (
